@@ -54,3 +54,61 @@
   .software-card span{width:100%}
   .tutorial-block h2{font-size:24px}
 }
+
+
+/* v5 fixes: remove home right preview panel + smaller Clash Meta icons */
+.hero{grid-template-columns:1fr !important}
+.hero-copy{max-width:none}
+.hero-panel{display:none !important}
+.software-logo-img{
+  width:58px !important;
+  height:58px !important;
+  max-width:58px !important;
+  max-height:58px !important;
+  min-width:58px !important;
+  flex:0 0 58px !important;
+  object-fit:contain !important;
+  border-radius:14px !important;
+  background:#fff !important;
+}
+.app-icon{
+  width:56px !important;
+  height:56px !important;
+  max-width:56px !important;
+  max-height:56px !important;
+  min-width:56px !important;
+  flex:0 0 56px !important;
+  object-fit:contain !important;
+  border-radius:14px !important;
+  background:#fff !important;
+}
+.software-card{min-height:auto !important}
+@media(max-width:720px){
+  .software-logo-img{
+    width:46px !important;
+    height:46px !important;
+    max-width:46px !important;
+    max-height:46px !important;
+    min-width:46px !important;
+    flex-basis:46px !important;
+    border-radius:12px !important;
+  }
+  .app-icon{
+    width:46px !important;
+    height:46px !important;
+    max-width:46px !important;
+    max-height:46px !important;
+    min-width:46px !important;
+    flex-basis:46px !important;
+    border-radius:12px !important;
+  }
+  .software-card{
+    padding:18px !important;
+    gap:12px !important;
+    align-items:center !important;
+  }
+  .app-head{
+    gap:12px !important;
+    align-items:center !important;
+  }
+}
