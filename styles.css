@@ -269,3 +269,32 @@ body.dark .theme-toggle::before{
 .theme-toggle::before{content:"☾"; position:absolute !important; left:50% !important; top:50% !important; transform:translate(-50%,-50%) !important; text-indent:0 !important; font-size:25px !important; line-height:1 !important; display:block !important; width:auto !important; height:auto !important;}
 body.dark .theme-toggle::before{content:"☀"; font-size:22px !important;}
 @media(max-width:720px){.theme-toggle::before{font-size:22px !important;} body.dark .theme-toggle::before{font-size:20px !important;}}
+
+
+/* v15 homepage hero spacing + dark nav readability + true centered theme icon */
+.hero-actions{margin-top:22px !important;margin-bottom:0 !important;}
+.hero-actions + .site-warning{margin-top:28px !important;}
+@media(max-width:720px){
+  .hero-actions{margin-top:18px !important;}
+  .hero-actions + .site-warning{margin-top:22px !important;}
+}
+
+body.dark .nav{background:rgba(255,255,255,.08) !important;border-color:rgba(255,255,255,.12) !important;}
+body.dark .nav a{color:#c5d1e3 !important;}
+body.dark .nav a.active,
+body.dark .nav a:hover{color:#f4f8ff !important;background:rgba(125,211,252,.16) !important;}
+
+.theme-toggle{position:relative !important;display:flex !important;align-items:center !important;justify-content:center !important;padding:0 !important;text-indent:-9999px !important;overflow:hidden !important;}
+.theme-toggle::before,.theme-toggle::after{content:"";position:absolute !important;left:50% !important;top:50% !important;}
+/* light mode moon */
+.theme-toggle::before{width:22px !important;height:22px !important;border-radius:50% !important;background:#172033 !important;transform:translate(-50%,-50%) !important;}
+.theme-toggle::after{width:19px !important;height:19px !important;border-radius:50% !important;background:var(--card) !important;transform:translate(-31%,-66%) !important;}
+/* dark mode sun */
+body.dark .theme-toggle::before{width:18px !important;height:18px !important;border-radius:50% !important;background:#fbbf24 !important;box-shadow:0 0 0 4px rgba(251,191,36,.18) !important;transform:translate(-50%,-50%) !important;}
+body.dark .theme-toggle::after{width:28px !important;height:28px !important;border-radius:50% !important;border:2px solid rgba(251,191,36,.45) !important;background:transparent !important;transform:translate(-50%,-50%) !important;}
+@media(max-width:720px){
+  .theme-toggle::before{width:20px !important;height:20px !important;}
+  .theme-toggle::after{width:17px !important;height:17px !important;transform:translate(-30%,-64%) !important;}
+  body.dark .theme-toggle::before{width:16px !important;height:16px !important;}
+  body.dark .theme-toggle::after{width:24px !important;height:24px !important;transform:translate(-50%,-50%) !important;}
+}
