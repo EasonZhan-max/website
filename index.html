@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,13 +9,13 @@
 </head>
 <body>
   <header class="topbar">
-    <div class="brand">
+    <a class="brand" href="./index.html">
       <span class="brand-logo">E</span>
       <div>
         <strong>Eason 的中转站</strong>
         <p>软件下载站</p>
       </div>
-    </div>
+    </a>
 
     <nav class="nav">
       <a href="./index.html" class="active">软件</a>
@@ -23,122 +23,181 @@
       <a href="#domains">子域名</a>
       <a href="#notice">说明</a>
     </nav>
+
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="切换深色浅色模式">
+      <span class="sun">☀️</span>
+      <span class="moon">🌙</span>
+    </button>
   </header>
 
-  <main class="container">
-    <section class="hero simple">
-      <p class="crumb">首页 / 软件</p>
-      <h1>软件下载站</h1>
-      <p class="desc">这里用于整理常用软件安装包、项目入口和子域名导航。点击软件分类进入对应下载页。</p>
+  <main>
+    <section class="hero container">
+      <div class="hero-left">
+        <p class="crumb">首页 / 软件中心</p>
+        <h1>软件下载站</h1>
+        <p class="desc">
+          整理常用软件安装包、使用教程、项目入口和子域名导航。
+          首页只做分类展示，点击软件卡片进入独立下载页。
+        </p>
+
+        <div class="search-box">
+          <input id="searchInput" type="search" placeholder="搜索软件，例如 Clash Meta、Windows、iOS..." />
+          <span>⌕</span>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <p>站点结构</p>
+        <pre>软件中心
+├─ Clash Meta
+│  ├─ Android
+│  ├─ Windows
+│  └─ iOS
+├─ Windows 工具
+├─ iOS 工具
+└─ 项目 / 子域名导航</pre>
+      </div>
     </section>
 
-    <section class="section">
+    <section class="container section">
       <div class="section-head">
-        <h2>软件分类</h2>
+        <div>
+          <p class="eyebrow">Software</p>
+          <h2>软件分类</h2>
+        </div>
         <span>最后更新：2026 年 5 月 28 日</span>
       </div>
 
-      <div class="software-list">
-        <a class="software-row" href="./software/clash-meta.html">
-          <div>
-            <h3>Clash Meta</h3>
-            <p>代理客户端 / Android 安装包 / 配置教程</p>
+      <div class="software-grid" id="softwareGrid">
+        <a class="software-card" href="./software/clash-meta.html" data-keywords="clash meta android windows ios 代理 客户端">
+          <div class="card-icon">CM</div>
+          <div class="card-content">
+            <div class="card-title-row">
+              <h3>Clash Meta</h3>
+              <span class="status ok">已收录</span>
+            </div>
+            <p>代理客户端 / Android 安装包 / Windows 与 iOS 分类入口</p>
+            <div class="chips">
+              <span>Android</span>
+              <span>Windows</span>
+              <span>iOS</span>
+            </div>
           </div>
-          <span>进入下载 →</span>
+          <b>进入 →</b>
         </a>
 
-        <a class="software-row disabled" href="javascript:void(0)">
-          <div>
-            <h3>Windows 工具</h3>
-            <p>Windows 常用软件安装包分类，后续添加。</p>
+        <a class="software-card disabled" href="javascript:void(0)" data-keywords="windows tools exe zip">
+          <div class="card-icon">WIN</div>
+          <div class="card-content">
+            <div class="card-title-row">
+              <h3>Windows 工具</h3>
+              <span class="status">待添加</span>
+            </div>
+            <p>Windows 常用软件、EXE、ZIP 等安装包分类。</p>
+            <div class="chips">
+              <span>EXE</span>
+              <span>ZIP</span>
+            </div>
           </div>
-          <span>暂未添加</span>
+          <b>暂未开放</b>
         </a>
 
-        <a class="software-row disabled" href="javascript:void(0)">
-          <div>
-            <h3>iOS 工具</h3>
-            <p>iOS 客户端、TestFlight、IPA 等资源分类，后续添加。</p>
+        <a class="software-card disabled" href="javascript:void(0)" data-keywords="ios testflight ipa app store">
+          <div class="card-icon">iOS</div>
+          <div class="card-content">
+            <div class="card-title-row">
+              <h3>iOS 工具</h3>
+              <span class="status">待添加</span>
+            </div>
+            <p>iOS 客户端、TestFlight、IPA、App Store 链接分类。</p>
+            <div class="chips">
+              <span>TestFlight</span>
+              <span>IPA</span>
+            </div>
           </div>
-          <span>暂未添加</span>
+          <b>暂未开放</b>
         </a>
       </div>
     </section>
 
-    <section id="projects" class="section">
+    <section id="projects" class="container section">
       <div class="section-head">
-        <h2>项目入口</h2>
+        <div>
+          <p class="eyebrow">Projects</p>
+          <h2>项目入口</h2>
+        </div>
       </div>
 
-      <table class="table">
-        <thead>
-          <tr>
-            <th>项目</th>
-            <th>链接</th>
-            <th>说明</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>应用项目</td>
-            <td><a href="https://app.easonzhan.cyou" target="_blank">app.easonzhan.cyou</a></td>
-            <td>应用项目或演示页面</td>
-          </tr>
-          <tr>
-            <td>API 服务</td>
-            <td><a href="https://api.easonzhan.cyou" target="_blank">api.easonzhan.cyou</a></td>
-            <td>接口服务或接口文档</td>
-          </tr>
-          <tr>
-            <td>文档说明</td>
-            <td><a href="https://docs.easonzhan.cyou" target="_blank">docs.easonzhan.cyou</a></td>
-            <td>教程、说明、更新日志</td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="table-wrap">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>项目</th>
+              <th>链接</th>
+              <th>说明</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>应用项目</td>
+              <td><a href="https://app.easonzhan.cyou" target="_blank">app.easonzhan.cyou</a></td>
+              <td>应用项目或演示页面</td>
+            </tr>
+            <tr>
+              <td>API 服务</td>
+              <td><a href="https://api.easonzhan.cyou" target="_blank">api.easonzhan.cyou</a></td>
+              <td>接口服务或接口文档</td>
+            </tr>
+            <tr>
+              <td>文档说明</td>
+              <td><a href="https://docs.easonzhan.cyou" target="_blank">docs.easonzhan.cyou</a></td>
+              <td>教程、说明、更新日志</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </section>
 
-    <section id="domains" class="section">
+    <section id="domains" class="container section">
       <div class="section-head">
-        <h2>子域名导航</h2>
+        <div>
+          <p class="eyebrow">Subdomains</p>
+          <h2>子域名导航</h2>
+        </div>
       </div>
 
-      <table class="table">
-        <thead>
-          <tr>
-            <th>子域名</th>
-            <th>用途</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>www.easonzhan.cyou</td>
-            <td>官网首页 / 软件下载站</td>
-          </tr>
-          <tr>
-            <td>app.easonzhan.cyou</td>
-            <td>应用项目入口</td>
-          </tr>
-          <tr>
-            <td>api.easonzhan.cyou</td>
-            <td>API 服务入口</td>
-          </tr>
-          <tr>
-            <td>docs.easonzhan.cyou</td>
-            <td>文档说明入口</td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="domain-grid">
+        <div class="domain-card">
+          <h3>www.easonzhan.cyou</h3>
+          <p>官网首页 / 软件下载站</p>
+        </div>
+        <div class="domain-card">
+          <h3>app.easonzhan.cyou</h3>
+          <p>应用项目入口</p>
+        </div>
+        <div class="domain-card">
+          <h3>api.easonzhan.cyou</h3>
+          <p>API 服务入口</p>
+        </div>
+        <div class="domain-card">
+          <h3>docs.easonzhan.cyou</h3>
+          <p>文档说明入口</p>
+        </div>
+      </div>
     </section>
 
-    <section id="notice" class="section notice">
-      <h2>说明</h2>
-      <p>本站只整理软件下载入口和项目导航。不要把账号密码、订阅链接、API Key 等敏感信息写到网页前端。</p>
+    <section id="notice" class="container section">
+      <div class="notice">
+        <h2>说明</h2>
+        <p>本站只整理软件下载入口和项目导航。不要把账号密码、订阅链接、API Key 等敏感信息写到公开网页或 GitHub 仓库里。</p>
+      </div>
     </section>
   </main>
 
   <footer class="footer">
     © 2026 Eason 的中转站 · Software Download Site
   </footer>
+
+  <script src="./script.js"></script>
 </body>
 </html>
