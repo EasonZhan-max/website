@@ -112,24 +112,3 @@
     align-items:center !important;
   }
 }
-
-
-/* v6 mobile download cards */
-.mobile-only{display:none}
-.desktop-only{display:block}
-.mobile-download-list{display:none}
-.mobile-download-card{display:block;padding:16px 16px 14px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.42);box-shadow:var(--shadow);margin-bottom:14px}
-body.dark .mobile-download-card{background:rgba(255,255,255,.03)}
-.mobile-download-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px}
-.mobile-download-top strong{font-size:17px;line-height:1.45}
-.mobile-download-top span{display:inline-flex;align-items:center;justify-content:center;padding:10px 14px;border-radius:12px;background:rgba(14,165,165,.13);color:var(--brand);font-weight:900;white-space:nowrap}
-.mobile-download-card code{display:block;line-height:1.6;overflow-wrap:anywhere;word-break:break-all}
-
-@media(max-width:720px){
-  .desktop-only{display:none !important}
-  .mobile-only{display:block !important}
-  .mobile-download-list{display:block !important}
-  .mobile-download-card{padding:14px}
-  .mobile-download-top{align-items:flex-start;flex-direction:column}
-  .mobile-download-top span{width:100%}
-}
