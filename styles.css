@@ -387,3 +387,90 @@ body.dark .theme-toggle .theme-glyph{font-size:23px !important;transform:transla
     height:118px;
   }
 }
+
+
+/* v23 iOS Shadowrocket tutorial */
+.shadowrocket-logo{
+  background:linear-gradient(135deg,#111827,#0ea5a5) !important;
+  color:#fff !important;
+  display:grid;
+  place-items:center;
+  font-weight:950;
+  letter-spacing:-.04em;
+}
+.demo-account-card{
+  width:min(560px,100%);
+  padding:22px 24px;
+  border-radius:18px;
+  border:1px solid var(--line);
+  background:rgba(255,255,255,.35);
+  display:grid;
+  gap:12px;
+}
+body.dark .demo-account-card{
+  background:rgba(255,255,255,.04);
+}
+.demo-account-card p{
+  margin:0;
+  font-size:17px;
+  line-height:1.7;
+}
+.demo-account-card b{
+  color:var(--text);
+}
+.demo-switch{
+  justify-self:start;
+  margin-top:6px;
+  border:0;
+  border-radius:12px;
+  padding:12px 16px;
+  background:rgba(14,165,165,.13);
+  color:var(--brand);
+  font-weight:900;
+  cursor:pointer;
+}
+.shadow-warning{
+  margin-top:24px;
+  padding:24px;
+  border-left:5px solid #14b8a6;
+  border-radius:18px;
+  background:rgba(14,165,165,.08);
+}
+.shadow-warning h3{
+  margin:0 0 18px;
+  color:#ef4444;
+  font-size:24px;
+}
+.shadow-warning p{
+  margin:0 0 14px;
+  color:#ef4444;
+  font-weight:850;
+  line-height:1.8;
+}
+.shadow-warning .soft{
+  color:var(--text);
+  font-weight:650;
+}
+.shadow-steps{
+  grid-template-columns:repeat(2,1fr);
+}
+@media(max-width:720px){
+  .demo-account-card{
+    padding:18px;
+  }
+  .shadow-warning{
+    padding:18px;
+  }
+  .shadow-steps{
+    grid-template-columns:1fr;
+  }
+}
+
+
+/* v24 Shadowrocket demo account note */
+.demo-note{
+  margin:2px 0 0 !important;
+  color:var(--muted);
+  font-size:14px !important;
+  line-height:1.6 !important;
+}
