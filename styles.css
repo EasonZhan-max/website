@@ -199,3 +199,9 @@ main .hero + .site-warning + .category-grid{margin-top:18px}
     border-radius:10px !important;
   }
 }
+
+
+/* v12 warning position + theme icon centering */
+.theme-toggle{display:grid !important;place-items:center !important;line-height:1 !important;padding:0 !important;text-align:center !important}
+.site-warning{margin:18px 0 0 !important}
+@media(max-width:720px){.site-warning{margin-top:16px !important}}
