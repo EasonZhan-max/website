@@ -205,3 +205,58 @@ main .hero + .site-warning + .category-grid{margin-top:18px}
 .theme-toggle{display:grid !important;place-items:center !important;line-height:1 !important;padding:0 !important;text-align:center !important}
 .site-warning{margin:18px 0 0 !important}
 @media(max-width:720px){.site-warning{margin-top:16px !important}}
+
+
+/* v13 homepage notice position + theme button centering */
+.hero-actions + .site-warning{
+  margin-top:26px !important;
+  margin-bottom:0 !important;
+}
+.theme-toggle{
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  padding:0 !important;
+  line-height:0 !important;
+  font-size:0 !important;
+  position:relative !important;
+  overflow:hidden !important;
+}
+.theme-toggle::before{
+  content:"☾";
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  width:100% !important;
+  height:100% !important;
+  font-size:25px !important;
+  line-height:1 !important;
+  transform:translateY(-1px);
+}
+body.dark .theme-toggle::before{
+  content:"☀";
+  font-size:22px !important;
+  transform:translateY(0);
+}
+@media(max-width:720px){
+  .hero-actions + .site-warning{
+    margin-top:24px !important;
+  }
+  .theme-toggle::before{
+    font-size:22px !important;
+  }
+  body.dark .theme-toggle::before{
+    font-size:20px !important;
+  }
+}
+
+
+/* v13 V2rayNG */
+.v2rayng-logo{
+  background:linear-gradient(135deg,#64748b,#2563eb) !important;
+  color:#fff !important;
+  display:grid;
+  place-items:center;
+  font-weight:950;
+  letter-spacing:-.04em;
+}
