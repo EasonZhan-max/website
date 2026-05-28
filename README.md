@@ -1,41 +1,30 @@
-# Eason 下载与教程站
+# Eason的下载站
 
-这是一个专门用于 **软件下载 / 教程聚合** 的静态网站模板。
+一个静态软件下载 / 教程聚合站。
 
-## 站点定位
+## 已添加内容
 
-- 软件下载站
-- 教程聚合站
-- 机场客户端安装包聚合
-- 新手说明 / FAQ
+- 客户端
+  - Android
+    - Clash Meta 下载页
 
-## 已包含内容
+## 安装包放置路径
 
-- 首页重新设计
-- 深色 / 浅色模式切换
-- 软件聚合卡片
-- 软件独立详情页
-- 教程文章页
-- 手机端适配
-- 搜索软件功能
-
-## 文件结构
+把 APK 文件放到：
 
 ```txt
-index.html
-style.css
-script.js
-software/
-guides/
+downloads/client/android/clash-meta/
 ```
 
-## 你后续怎么改
+文件名保持一致：
 
-### 1. 改下载链接
-打开 `software/` 文件夹内对应页面，把下载按钮链接替换成你自己的链接。
+```txt
+cmfa-2.11.28-meta-armeabi-v7a-release.apk
+cmfa-2.11.28-meta-universal-release.apk
+cmfa-2.11.28-meta-x86-release.apk
+cmfa-2.11.28-meta-x86_64-release.apk
+```
 
-### 2. 新增软件
-复制任意一个软件页面，改标题和下载项，然后在 `index.html` 首页的软件卡片区域新增入口。
+## GitHub Pages 使用
 
-### 3. 部署
-把全部文件上传到 GitHub 仓库根目录，然后开启 GitHub Pages 即可。
+把本文件夹所有内容上传到仓库根目录，然后开启 GitHub Pages 即可。

@@ -1,293 +1,213 @@
-<!DOCTYPE html>
-<html lang="zh-CN" data-theme="dark">
+<!doctype html>
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Eason 下载与教程站</title>
-  <meta name="description" content="软件下载与教程聚合站，聚合常见机场客户端安装包、平台下载入口与基础使用教程。" />
-  <link rel="stylesheet" href="./style.css" />
+  <title>Eason的下载站</title>
+  <meta name="description" content="Eason的下载站：客户端软件下载、安装包聚合、教程整理。" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div class="bg-grid"></div>
-
   <header class="site-header">
-    <div class="container nav-wrap">
-      <a class="brand" href="./index.html">
-        <span class="brand-badge">E</span>
-        <span class="brand-copy">
-          <strong>Eason 下载与教程站</strong>
-          <small>Software & Guides Hub</small>
-        </span>
-      </a>
-
-      <nav class="main-nav">
-        <a href="#software">软件</a>
-        <a href="#categories">分类</a>
-        <a href="#guides">教程</a>
-        <a href="#faq">FAQ</a>
-      </nav>
-
-      <button id="themeToggle" class="theme-toggle" type="button" aria-label="切换深色浅色模式">
-        <span>☀</span>
-        <span>🌙</span>
-      </button>
-    </div>
+    <a class="brand" href="#/">
+      <span class="brand-mark">E</span>
+      <span class="brand-text">Eason的下载站</span>
+    </a>
+    <nav class="nav">
+      <a href="#/" data-nav="home">首页</a>
+      <a href="#/client" data-nav="client">客户端</a>
+      <a href="#/tutorial" data-nav="tutorial">教程</a>
+    </nav>
+    <button class="theme-toggle" id="themeToggle" aria-label="切换深浅色模式">☾</button>
   </header>
 
-  <main>
-    <section class="hero">
-      <div class="container hero-inner">
+  <main class="container">
+    <section class="page page-home" data-page="home">
+      <div class="hero">
         <div class="hero-copy">
-          <p class="eyebrow">DOWNLOADS / GUIDES / CLIENT HUB</p>
+          <p class="eyebrow">Software & Tutorials</p>
           <h1>软件下载与教程聚合站</h1>
-          <p class="hero-desc">
-            这里只做软件下载与教程整理，聚合常见机场客户端、不同平台安装入口、
-            简明教程和新手说明。点进软件卡片即可查看对应下载页与使用教程。
-          </p>
-
+          <p class="hero-desc">把常用客户端、安装包、平台分类和使用教程整理到一个干净好找的网站里。</p>
           <div class="hero-actions">
-            <a class="btn primary" href="#software">浏览软件</a>
-            <a class="btn secondary" href="#guides">查看教程</a>
-          </div>
-
-          <div class="hero-stats">
-            <div>
-              <strong>6</strong>
-              <span>软件分类</span>
-            </div>
-            <div>
-              <strong>4</strong>
-              <span>平台类型</span>
-            </div>
-            <div>
-              <strong>5</strong>
-              <span>基础教程</span>
-            </div>
+            <a class="btn primary" href="#/client">进入客户端</a>
+            <a class="btn ghost" href="#/tutorial">查看教程</a>
           </div>
         </div>
-
-        <div class="hero-panel glass">
-          <div class="panel-head">
+        <div class="hero-panel">
+          <div class="panel-top">
             <span></span><span></span><span></span>
           </div>
-          <div class="panel-body">
-            <p class="panel-title">站点结构</p>
-            <div class="panel-line">
-              <b>01</b>
-              <div>
-                <strong>软件下载</strong>
-                <span>按客户端分类整理</span>
-              </div>
-            </div>
-            <div class="panel-line">
-              <b>02</b>
-              <div>
-                <strong>平台安装包</strong>
-                <span>Android / Windows / macOS / iOS</span>
-              </div>
-            </div>
-            <div class="panel-line">
-              <b>03</b>
-              <div>
-                <strong>基础教程</strong>
-                <span>下载、安装、导入订阅、常见问题</span>
-              </div>
-            </div>
+          <div class="panel-lines">
+            <i></i><i></i><i></i><i></i>
           </div>
+          <div class="panel-card">Android / Windows / macOS / iOS</div>
         </div>
+      </div>
+
+      <div class="section-title">
+        <h2>分类入口</h2>
+        <p>先从“客户端”分类开始，后面可以继续加更多软件和教程。</p>
+      </div>
+
+      <div class="category-grid">
+        <a class="category-card featured" href="#/client">
+          <span class="card-icon">⌘</span>
+          <h3>客户端</h3>
+          <p>各平台软件安装包聚合下载。</p>
+          <b>进入分类 →</b>
+        </a>
+        <a class="category-card" href="#/tutorial">
+          <span class="card-icon">📘</span>
+          <h3>教程</h3>
+          <p>安装、导入、使用说明集中整理。</p>
+          <b>建设中 →</b>
+        </a>
+        <a class="category-card disabled" href="javascript:void(0)">
+          <span class="card-icon">＋</span>
+          <h3>更多软件</h3>
+          <p>后续你发新的软件，我可以继续帮你加。</p>
+          <b>待添加</b>
+        </a>
       </div>
     </section>
 
-    <section id="categories" class="container section">
-      <div class="section-title">
-        <p>Categories</p>
-        <h2>平台分类</h2>
+    <section class="page" data-page="client">
+      <div class="breadcrumb"><a href="#/">首页</a><span>/</span><b>客户端</b></div>
+      <div class="page-head">
+        <p class="eyebrow">Client Category</p>
+        <h1>客户端</h1>
+        <p>按系统平台分类整理客户端安装包。</p>
       </div>
-
       <div class="platform-grid">
-        <article class="platform-card glass">
-          <span class="emoji">🤖</span>
-          <h3>Android</h3>
-          <p>APK 安装包、通用版与不同架构版本。</p>
-        </article>
-        <article class="platform-card glass">
-          <span class="emoji">🪟</span>
-          <h3>Windows</h3>
-          <p>EXE、ZIP、绿色版和桌面客户端入口。</p>
-        </article>
-        <article class="platform-card glass">
-          <span class="emoji">🍎</span>
-          <h3>macOS</h3>
-          <p>Apple Silicon 与 Intel 双架构安装入口。</p>
-        </article>
-        <article class="platform-card glass">
-          <span class="emoji">📱</span>
-          <h3>iOS</h3>
-          <p>App Store、TestFlight、付费客户端说明。</p>
-        </article>
+        <a class="platform-card" href="#/client/android">
+          <span>Android</span>
+          <h3>安卓客户端</h3>
+          <p>APK 安装包、不同 CPU 架构版本。</p>
+          <b>查看软件 →</b>
+        </a>
+        <div class="platform-card muted">
+          <span>Windows</span>
+          <h3>Windows 客户端</h3>
+          <p>待添加。</p>
+          <b>Coming Soon</b>
+        </div>
+        <div class="platform-card muted">
+          <span>macOS</span>
+          <h3>macOS 客户端</h3>
+          <p>待添加。</p>
+          <b>Coming Soon</b>
+        </div>
+        <div class="platform-card muted">
+          <span>iOS</span>
+          <h3>iOS 客户端</h3>
+          <p>待添加。</p>
+          <b>Coming Soon</b>
+        </div>
       </div>
     </section>
 
-    <section id="software" class="container section">
-      <div class="section-title row">
-        <div>
-          <p>Software</p>
-          <h2>软件聚合</h2>
-        </div>
-        <div class="search-wrap">
-          <input id="softwareSearch" type="search" placeholder="搜索软件：Clash Meta / Stash / Hiddify..." />
-        </div>
+    <section class="page" data-page="android">
+      <div class="breadcrumb"><a href="#/">首页</a><span>/</span><a href="#/client">客户端</a><span>/</span><b>Android</b></div>
+      <div class="page-head">
+        <p class="eyebrow">Android</p>
+        <h1>Android 软件</h1>
+        <p>当前已添加 1 个软件，后续可以继续扩展。</p>
       </div>
-
-      <div id="softwareGrid" class="software-grid">
-        <a class="software-card glass" href="./software/clash-meta.html" data-keywords="clash meta android windows ios macos mihomo">
-          <div class="software-top">
-            <div class="logo-chip cyan">CM</div>
-            <span class="pill ok">已整理</span>
+      <div class="software-list">
+        <a class="software-card" href="#/client/android/clash-meta">
+          <div class="software-logo">CM</div>
+          <div>
+            <h3>Clash Meta</h3>
+            <p>Android APK 安装包下载，包含通用版、ARMv7、x86、x86_64。</p>
           </div>
-          <h3>Clash Meta</h3>
-          <p>Android 安装包已整理，适合放机场订阅导入与基础使用教程。</p>
-          <div class="mini-tags">
-            <span>Android</span><span>Windows</span><span>iOS</span>
-          </div>
-          <b>进入下载页 →</b>
-        </a>
-
-        <a class="software-card glass" href="./software/clash-verge-rev.html" data-keywords="clash verge rev windows macos linux mihomo">
-          <div class="software-top">
-            <div class="logo-chip purple">CV</div>
-            <span class="pill wait">待补链接</span>
-          </div>
-          <h3>Clash Verge Rev</h3>
-          <p>桌面端常见客户端，适用于 Windows / macOS，页面已预留下载与教程结构。</p>
-          <div class="mini-tags">
-            <span>Windows</span><span>macOS</span>
-          </div>
-          <b>进入下载页 →</b>
-        </a>
-
-        <a class="software-card glass" href="./software/stash.html" data-keywords="stash ios apple app store">
-          <div class="software-top">
-            <div class="logo-chip orange">ST</div>
-            <span class="pill wait">待补链接</span>
-          </div>
-          <h3>Stash</h3>
-          <p>iOS / macOS 生态常见代理客户端，可整理购买说明与导入教程。</p>
-          <div class="mini-tags">
-            <span>iOS</span><span>macOS</span>
-          </div>
-          <b>进入下载页 →</b>
-        </a>
-
-        <a class="software-card glass" href="./software/shadowrocket.html" data-keywords="shadowrocket ios app store 小火箭">
-          <div class="software-top">
-            <div class="logo-chip green">SR</div>
-            <span class="pill wait">待补链接</span>
-          </div>
-          <h3>Shadowrocket</h3>
-          <p>iOS 常见客户端，适合放 App Store 链接说明、导入教程和使用提示。</p>
-          <div class="mini-tags">
-            <span>iOS</span><span>Guide</span>
-          </div>
-          <b>进入下载页 →</b>
-        </a>
-
-        <a class="software-card glass" href="./software/hiddify-next.html" data-keywords="hiddify next android windows macos ios">
-          <div class="software-top">
-            <div class="logo-chip blue">HD</div>
-            <span class="pill wait">待补链接</span>
-          </div>
-          <h3>Hiddify Next</h3>
-          <p>跨平台客户端，适合整理多平台下载入口和新手引导。</p>
-          <div class="mini-tags">
-            <span>Android</span><span>Windows</span><span>iOS</span>
-          </div>
-          <b>进入下载页 →</b>
-        </a>
-
-        <a class="software-card glass" href="./software/surfboard.html" data-keywords="surfboard android">
-          <div class="software-top">
-            <div class="logo-chip gray">SB</div>
-            <span class="pill wait">待补链接</span>
-          </div>
-          <h3>Surfboard</h3>
-          <p>Android 客户端页面模板，可补充下载地址、订阅导入和常见问题。</p>
-          <div class="mini-tags">
-            <span>Android</span>
-          </div>
-          <b>进入下载页 →</b>
+          <span>打开 →</span>
         </a>
       </div>
     </section>
 
-    <section id="guides" class="container section">
-      <div class="section-title">
-        <p>Guides</p>
-        <h2>新手教程</h2>
-      </div>
+    <section class="page" data-page="clash-meta">
+      <div class="breadcrumb"><a href="#/">首页</a><span>/</span><a href="#/client">客户端</a><span>/</span><a href="#/client/android">Android</a><span>/</span><b>Clash Meta</b></div>
+      <article class="download-page">
+        <div class="download-head">
+          <div>
+            <p class="eyebrow">Android Client</p>
+            <h1>Clash Meta 下载教程</h1>
+            <p>选择适合自己手机架构的安装包下载。大多数安卓手机可以先选“通用版”。</p>
+          </div>
+          <a class="btn primary" href="#download-table">立即下载</a>
+        </div>
 
-      <div class="guide-grid">
-        <a class="guide-card glass" href="./guides/how-to-download.html">
-          <b>01</b>
-          <h3>如何下载安装软件</h3>
-          <p>选择平台、识别版本、下载后安装的基础步骤。</p>
-        </a>
-        <a class="guide-card glass" href="./guides/how-to-import-subscription.html">
-          <b>02</b>
-          <h3>如何导入订阅</h3>
-          <p>复制订阅链接、导入配置、更新节点的基础流程。</p>
-        </a>
-        <a class="guide-card glass" href="./guides/how-to-pick-version.html">
-          <b>03</b>
-          <h3>如何选择版本</h3>
-          <p>Android 架构、Windows / macOS、iOS 客户端的选择说明。</p>
-        </a>
-        <a class="guide-card glass" href="./guides/common-issues.html">
-          <b>04</b>
-          <h3>常见问题</h3>
-          <p>无法安装、无法导入、无法连接等常见情况说明。</p>
-        </a>
-        <a class="guide-card glass" href="./guides/airport-basics.html">
-          <b>05</b>
-          <h3>机场订阅基础说明</h3>
-          <p>订阅链接、节点、流量、客户端的基本概念解释。</p>
-        </a>
-      </div>
+        <div class="notice">
+          <strong>本地安装包路径：</strong>
+          <code>downloads/client/android/clash-meta/</code>
+          <span>把 APK 文件放到这个文件夹后，下面的下载按钮就能正常使用。</span>
+        </div>
+
+        <section class="tutorial-block" id="download-table">
+          <h2>1. 下载软件</h2>
+          <div class="table-wrap">
+            <table class="download-table">
+              <thead>
+                <tr>
+                  <th>版本</th>
+                  <th>安装包文件名</th>
+                  <th>下载链接</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Android ARMv7（很老的手机）</td>
+                  <td><code>cmfa-2.11.28-meta-armeabi-v7a-release.apk</code></td>
+                  <td><a class="download-link" href="downloads/client/android/clash-meta/cmfa-2.11.28-meta-armeabi-v7a-release.apk" download>点击下载</a></td>
+                </tr>
+                <tr>
+                  <td>Android 通用版</td>
+                  <td><code>cmfa-2.11.28-meta-universal-release.apk</code></td>
+                  <td><a class="download-link" href="downloads/client/android/clash-meta/cmfa-2.11.28-meta-universal-release.apk" download>点击下载</a></td>
+                </tr>
+                <tr>
+                  <td>Android x86</td>
+                  <td><code>cmfa-2.11.28-meta-x86-release.apk</code></td>
+                  <td><a class="download-link" href="downloads/client/android/clash-meta/cmfa-2.11.28-meta-x86-release.apk" download>点击下载</a></td>
+                </tr>
+                <tr>
+                  <td>Android x86_64</td>
+                  <td><code>cmfa-2.11.28-meta-x86_64-release.apk</code></td>
+                  <td><a class="download-link" href="downloads/client/android/clash-meta/cmfa-2.11.28-meta-x86_64-release.apk" download>点击下载</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="tutorial-block">
+          <h2>2. 安装说明</h2>
+          <div class="steps">
+            <div><b>01</b><span>下载 APK 到手机。</span></div>
+            <div><b>02</b><span>如果系统提示风险，打开“允许安装未知来源应用”。</span></div>
+            <div><b>03</b><span>安装完成后打开软件，再按你的订阅或配置教程导入节点。</span></div>
+          </div>
+        </section>
+      </article>
     </section>
 
-    <section id="faq" class="container section">
-      <div class="section-title">
-        <p>FAQ</p>
-        <h2>站点说明</h2>
+    <section class="page" data-page="tutorial">
+      <div class="breadcrumb"><a href="#/">首页</a><span>/</span><b>教程</b></div>
+      <div class="page-head">
+        <p class="eyebrow">Tutorials</p>
+        <h1>教程</h1>
+        <p>这里可以放安装教程、订阅导入教程、常见问题等内容。</p>
       </div>
-
-      <div class="faq-wrap glass">
-        <div class="faq-item">
-          <h3>这个站主要做什么？</h3>
-          <p>只做软件下载与基础教程聚合，方便用户统一查找客户端和入门说明。</p>
-        </div>
-        <div class="faq-item">
-          <h3>可以继续补充更多软件吗？</h3>
-          <p>可以。你后续只需要照着现有页面结构继续新增软件页面即可。</p>
-        </div>
-        <div class="faq-item">
-          <h3>需要注意什么？</h3>
-          <p>不要把账号密码、订阅链接、API Key 等敏感信息直接写到公开网页里。</p>
-        </div>
-      </div>
+      <div class="empty-box">教程内容待添加。</div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div>
-        <strong>Eason 下载与教程站</strong>
-        <p>软件下载 / 教程聚合站</p>
-      </div>
-      <span>© 2026 All rights reserved.</span>
-    </div>
+  <footer class="footer">
+    <span>© <span id="year"></span> Eason的下载站</span>
+    <span>软件下载 / 教程聚合 / 本地文件分发</span>
   </footer>
 
-  <script src="./script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
