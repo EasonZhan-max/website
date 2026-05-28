@@ -1,31 +1,32 @@
 const root = document.documentElement;
-const savedTheme = localStorage.getItem("theme");
+const savedTheme = localStorage.getItem("site-theme");
 
 if (savedTheme) {
   root.setAttribute("data-theme", savedTheme);
 }
 
-const toggle = document.getElementById("themeToggle");
-if (toggle) {
-  toggle.addEventListener("click", () => {
+const themeToggle = document.getElementById("themeToggle");
+
+if (themeToggle) {
+  themeToggle.addEventListener("click", () => {
     const current = root.getAttribute("data-theme") || "dark";
     const next = current === "dark" ? "light" : "dark";
     root.setAttribute("data-theme", next);
-    localStorage.setItem("theme", next);
+    localStorage.setItem("site-theme", next);
   });
 }
 
 const searchInput = document.getElementById("searchInput");
-const grid = document.getElementById("softwareGrid");
+const softwareGrid = document.getElementById("softwareGrid");
 
-if (searchInput && grid) {
+if (searchInput && softwareGrid) {
   searchInput.addEventListener("input", () => {
     const keyword = searchInput.value.trim().toLowerCase();
-    const cards = grid.querySelectorAll(".software-card");
+    const cards = softwareGrid.querySelectorAll(".software-card");
 
-    cards.forEach((card) => {
+    cards.forEach(card => {
       const text = (card.innerText + " " + (card.dataset.keywords || "")).toLowerCase();
-      card.style.display = text.includes(keyword) ? "grid" : "none";
+      card.style.display = text.includes(keyword) ? "flex" : "none";
     });
   });
 }
