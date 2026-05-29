@@ -1,8 +1,0 @@
-把下面 4 个真实 APK 文件上传到这个文件夹：
-
-cmfa-2.11.28-meta-armeabi-v7a-release.apk
-cmfa-2.11.28-meta-universal-release.apk
-cmfa-2.11.28-meta-x86-release.apk
-cmfa-2.11.28-meta-x86_64-release.apk
-
-注意：这里只能放真实 APK 文件，不能只写文件名。
