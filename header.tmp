@@ -1,6 +1,6 @@
 <div class="bg-grid"></div>
 <header class="site-header">
-  <a class="brand" href="__ROOT__index.html"><span class="brand-mark">E</span><span class="brand-text">Eason的下载站</span></a>
+  <a class="brand" href="__ROOT__index.html"><span class="brand-mark">E</span><span class="brand-text">Eason的软件下载中转站</span></a>
   <nav class="nav">
     <a __HOME__ href="__ROOT__index.html">首页</a>
     <a __CLIENT__ href="__ROOT__client/index.html">工具下载</a>

@@ -624,3 +624,18 @@ body.dark .demo-account-card{
     font-size:14px !important;
   }
 }
+
+/* v28 tutorial category + video page */
+.tutorial-section-title{margin-top:34px}
+.tutorial-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.tutorial-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);backdrop-filter:blur(18px);padding:28px;display:flex;gap:20px;align-items:flex-start;transition:.2s transform,.2s border}
+.tutorial-card:hover{transform:translateY(-4px);border-color:rgba(14,165,165,.45)}
+.tutorial-card h3{margin:0 0 10px;font-size:26px}
+.tutorial-card p{margin:0;color:var(--muted);line-height:1.8}
+.tutorial-card b{display:block;margin-top:22px;color:var(--brand)}
+.tutorial-logo{background:linear-gradient(135deg,var(--brand),var(--brand2)) !important;color:#fff !important;display:grid;place-items:center;font-weight:950}
+.video-frame{width:100%;aspect-ratio:16/9;border-radius:22px;overflow:hidden;background:rgba(0,0,0,.32);border:1px solid var(--line);box-shadow:var(--shadow)}
+.video-frame iframe{width:100%;height:100%;border:0;display:block}
+.video-link-text{margin:16px 0 0;color:var(--muted);line-height:1.8}
+.video-link-text a{color:var(--brand);font-weight:900}
+@media(max-width:720px){.tutorial-grid{grid-template-columns:1fr}.tutorial-card{padding:20px;border-radius:20px}.tutorial-card h3{font-size:22px}.video-frame{border-radius:16px}}
