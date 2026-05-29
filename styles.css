@@ -474,3 +474,153 @@ body.dark .demo-account-card{
   font-size:14px !important;
   line-height:1.6 !important;
 }
+
+
+/* v26 mobile platform grid 2x2 */
+@media(max-width:720px){
+  .platform-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+    gap:14px !important;
+  }
+  .platform-card{
+    min-height:190px !important;
+    padding:18px !important;
+  }
+  .platform-card h3{
+    font-size:18px !important;
+    line-height:1.25 !important;
+  }
+  .platform-card p{
+    font-size:14px !important;
+    line-height:1.6 !important;
+  }
+}
+
+
+/* v27 shadowrocket mobile optimization */
+.shadowrocket-page .guide-head{
+  align-items:flex-start;
+}
+.shadowrocket-page .app-head{
+  width:100%;
+}
+.shadowrocket-page .app-head-copy{
+  min-width:0;
+}
+.shadowrocket-page .app-head-copy h1{
+  word-break:break-word;
+}
+.shadowrocket-page .demo-account-card{
+  width:min(620px,100%);
+}
+.shadowrocket-page .demo-switch{
+  min-height:44px;
+}
+.shadowrocket-page .tutorial-block{
+  overflow:hidden;
+}
+
+@media(max-width:720px){
+  .shadowrocket-page{
+    padding:22px !important;
+  }
+  .shadowrocket-page .guide-head{
+    display:block !important;
+  }
+  .shadowrocket-page .app-head{
+    align-items:flex-start !important;
+    gap:14px !important;
+  }
+  .shadowrocket-page .app-icon{
+    width:52px !important;
+    height:52px !important;
+    max-width:52px !important;
+    max-height:52px !important;
+    min-width:52px !important;
+    flex-basis:52px !important;
+    border-radius:14px !important;
+  }
+  .shadowrocket-page .app-head-copy .eyebrow{
+    margin-bottom:8px !important;
+    font-size:12px !important;
+    letter-spacing:.12em !important;
+  }
+  .shadowrocket-page .app-head-copy h1{
+    font-size:clamp(24px,8vw,38px) !important;
+    line-height:1.12 !important;
+    margin-bottom:12px !important;
+  }
+  .shadowrocket-page .app-head-copy p{
+    font-size:15px !important;
+    line-height:1.8 !important;
+  }
+  .shadowrocket-page .tutorial-block{
+    margin-top:26px !important;
+  }
+  .shadowrocket-page .tutorial-block h2{
+    font-size:22px !important;
+    line-height:1.35 !important;
+    margin-bottom:16px !important;
+  }
+  .shadowrocket-page .demo-account-card{
+    width:100% !important;
+    padding:16px !important;
+    border-radius:16px !important;
+    gap:10px !important;
+  }
+  .shadowrocket-page .demo-account-card p{
+    font-size:15px !important;
+    line-height:1.75 !important;
+    overflow-wrap:anywhere;
+    word-break:break-word;
+  }
+  .shadowrocket-page .demo-switch{
+    width:100% !important;
+    justify-self:stretch !important;
+    text-align:center !important;
+    padding:12px 14px !important;
+    font-size:14px !important;
+    line-height:1.5 !important;
+  }
+  .shadowrocket-page .shadow-warning{
+    margin-top:18px !important;
+    padding:16px !important;
+    border-radius:16px !important;
+  }
+  .shadowrocket-page .shadow-warning h3{
+    font-size:20px !important;
+    margin-bottom:14px !important;
+  }
+  .shadowrocket-page .shadow-warning p{
+    font-size:15px !important;
+    line-height:1.8 !important;
+    margin-bottom:12px !important;
+  }
+  .shadowrocket-page .shadow-warning .soft{
+    font-size:14px !important;
+  }
+  .shadowrocket-page .notice{
+    padding:14px 16px !important;
+    border-radius:16px !important;
+  }
+  .shadowrocket-page .notice span{
+    display:block;
+    line-height:1.8;
+  }
+}
+
+@media(max-width:480px){
+  .shadowrocket-page{
+    padding:18px !important;
+  }
+  .shadowrocket-page .app-head{
+    flex-direction:row !important;
+    align-items:flex-start !important;
+  }
+  .shadowrocket-page .app-head-copy h1{
+    font-size:clamp(22px,9vw,32px) !important;
+  }
+  .shadowrocket-page .demo-account-card p{
+    font-size:14px !important;
+  }
+}
